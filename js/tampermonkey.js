@@ -7,7 +7,7 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=gota.io
 // @grant        GM_webRequest
 // @grant        GM_log
-// @connect      localhost       // Or the domain where your files are hosted
+// @connect      https://gylowlang.github.io/script/
 // @connect      127.0.0.1     // Or the domain where your files are hosted
 // @run-at       document-start
 // ==/UserScript==
@@ -34,7 +34,7 @@
 
  Object.defineProperty(window, 'build', { configurable: true, writable: true, value: undefined });
 
-    const REPLACEMENT_BASE_URL = 'http://localhost:5500'; // <-- Ensure trailing slash
+    const REPLACEMENT_BASE_URL = 'https://gylowlang.github.io/script/'; // <-- Ensure trailing slash
     const ORIGINAL_SCRIPT_URL = 'gota.js?v=3.6.5';
 
 
@@ -151,7 +151,7 @@
   document.ondrop = () => false;
     // Replace body content
 // Inject styles
-injectCSS('http://localhost:5500/styles.css');
+injectCSS('https://gylowlang.github.io/script/css/styles.css');
 // injectCSS('http://localhost:5500/gota.css'); // Temporarily disable gota.css injection
 
 
@@ -160,13 +160,13 @@ injectCSS('http://localhost:5500/styles.css');
    document.getElementsByTagName('body')[0].innerHTML = `<div id="dual-enhances-wrapper">${newHTML}</div>`;
 
    // Inject the main game logic script first
-   replaceScript("http://localhost:5500/dual.js")
+   replaceScript("https://gylowlang.github.io/script/javascript/dual-enhances.js")
    // Then inject the UI script
  }
 
 
  window.addEventListener('DOMContentLoaded', () => {
-     test("http://localhost:5500/index.txt")
+     test("https://gylowlang.github.io/script/html/index.html")
 
  });
 

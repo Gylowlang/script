@@ -160,7 +160,7 @@ injectCSS('https://gylowlang.github.io/script/css/styles.css');
    document.getElementsByTagName('body')[0].innerHTML = `<div id="dual-enhances-wrapper">${newHTML}</div>`;
 
    // Inject the main game logic script first
-   replaceScript("https://gylowlang.github.io/script/javascript/dual-enhances.js")
+   replaceScript('https://gylowlang.github.io/script/dual-enhances.js')
    // Then inject the UI script
  }
 

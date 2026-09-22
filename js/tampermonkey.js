@@ -16,7 +16,7 @@
     'use strict';
 
     // --- Block original Gota.io CSS ---
-    const cssBlockPattern = '*://gota.io/web/style.css*'; // Match the base URL and ignore query params like version
+    const cssBlockPattern = '*://gota.io/web/styles.css*'; // Match the base URL and ignore query params like version
     try {
         GM_webRequest(
             { url: cssBlockPattern, type: 'stylesheet' }, // Filter for stylesheets matching the pattern
